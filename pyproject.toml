@@ -1,9 +1,12 @@
 [tool.poetry]
-name = "blocks"
+name = "ml-blocks"
 version = "0.0.1"
 description = "blocks is a python package with a framework for building deep learning models"
 authors = ["dholland42 <danielholland414@gmail.com>"]
 license = "MIT"
+packages = [
+    {include = "blocks"} 
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
@@ -16,6 +19,7 @@ cpu = ["tensorflow", "tensorflow-estimator"]
 gpu = ["tensorflow-gpu", "tensorflow-estimator"]
 
 [tool.poetry.dev-dependencies]
+pylint = "^2.4.4"
 
 [build-system]
 requires = ["poetry>=0.12"]
